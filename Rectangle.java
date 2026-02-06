@@ -98,4 +98,10 @@ public class Rectangle {
     double epsilon = 1e-4;
     return Math.abs(this.height - this.width) < epsilon;
   }
+
+  // Return a description of a rectangle in the form of
+  // Rectangle[x=*,y=*,w=*,h=*]
+  public String toString(){
+    return "Rectangle[x="+originX+",y="+originY+",w="+width+",h="+height+"]";
+  }
 }
