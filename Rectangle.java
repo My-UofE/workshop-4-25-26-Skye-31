@@ -2,8 +2,8 @@
 public class Rectangle {
   
   // 4 instance attributes
-  public double width;
-  public double height;
+  private double width;
+  private double height;
   public double originX = 0.0;
   public double originY = 0.0;
 
@@ -24,6 +24,28 @@ public class Rectangle {
 
   public Rectangle() {
     this(1, 1, 0, 0);
+  }
+
+  public double getWidth(){ 
+    return this.width;
+  }
+
+  public void setWidth(double width){
+    if (width < 0) {
+      return;
+    }
+    this.width = width;
+  }
+
+  public double getHeight(){ 
+    return this.height;
+  }
+
+  public void setHeight(double height){
+    if (height < 0) {
+      return;
+    }
+    this.height = height;
   }
 
   // method: move the rectangle
@@ -69,7 +91,7 @@ public class Rectangle {
   }
   
   public double calcRatio() {
-    return this.width / this.height
+    return this.width / this.height;
   }
 
   public boolean isSquare() {
