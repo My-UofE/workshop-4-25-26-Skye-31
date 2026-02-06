@@ -32,6 +32,16 @@ public class Rectangle {
 	  this.originY += dy;
   }
 
+  public void scale(double factor) {
+    this.width *= factor;
+    this.height *= factor;
+  }
+
+  public void scale(double factorX, double factorY) {
+    this.width *= factorX;
+    this.height *= factorY;
+  }
+
   // method: compute the area of the rectangle
   public double getArea() {
     return this.width * this.height;
@@ -41,5 +51,29 @@ public class Rectangle {
   public double getPerimeter() {
     return 2 * (this.width + this.height);
   }
+
+  public boolean isOverlappedWith(Rectangle r){
+    if (this.originX + this.width <= r.originX || r.originX + r.width <= this.originX) {
+      return false;
+    }
+
+    if (this.originY + this.height <= r.originY || r.originY + r.height <= this.originY) {
+      return false;
+    }
+
+    return true;
+  }
+
+  public static boolean areOverlapping(Rectangle r1, Rectangle r2) {
+    return r1.isOverlappedWith(r2);
+  }
   
+  public double calcRatio() {
+    return this.width / this.height
+  }
+
+  public boolean isSquare() {
+    double epsilon = 1e-4;
+    return Math.abs(this.height - this.width) < epsilon;
+  }
 }
