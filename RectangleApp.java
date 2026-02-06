@@ -19,24 +19,18 @@ public class RectangleApp {
 		myRect1.move(0,10);//the object's state is changed
 		System.out.println("Origin is: "+myRect1.originX+","+myRect1.originY);
 
-		System.out.println("Changing width of myRect1");
+		System.out.println("\nChanging width of myRect1");
 		myRect1.width = 16;//the object's state is changed
 		System.out.println("Width: "+myRect1.width+", Height: "+myRect1.height);
 
-		/*
-		System.out.println("Creating myRect2");
+		System.out.println("\nCreating myRect2");
 		Rectangle myRect2 = new Rectangle(20.0, 8.0);
 		System.out.println("Width: "+myRect2.width+", Height: "+myRect2.height);
-		System.out.println("Origin: "+myRect2.originX+","+myRect2.originY);
-		 */
+		System.out.println("Origin: "+myRect2.originX+","+myRect2.originY);		
 
-
-		/*
-		System.out.println("Creating myRect3");
+		System.out.println("\nCreating myRect3");
 		Rectangle myRect3 = new Rectangle(); 
 		System.out.println("Width: "+myRect3.width+", Height: "+myRect3.height);
 		System.out.println("Origin: "+myRect3.originX+","+myRect3.originY);
-		 */
-
 	}
 }
